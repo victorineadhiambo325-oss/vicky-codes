@@ -1,0 +1,26 @@
+def to_do_list():
+    tasks=[]
+    while True:
+        print("1. Add task")
+        print("2. Remove task")
+        print("3. Show tasks")
+        print("4. Quit")
+        choice=input("enter your choices")
+        if choice=="1":
+            task=input("enter task:")
+            tasks.append(task)
+        elif choice=="2":
+            task=input ("enter task to removed")
+            if task in tasks:
+                tasks.remove(task)
+            else:
+                print("task not found")
+        elif choice=="3":
+            print("tasks:")
+            for task in tasks:
+                print("-"+task)
+        elif choice=="4":
+            break
+        else:
+            print("invalid choice")
+to_do_list()
